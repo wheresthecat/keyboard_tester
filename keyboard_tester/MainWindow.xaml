@@ -1,0 +1,345 @@
+﻿<Window x:Class="keyboard_tester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keyboard_tester"
+        mc:Ignorable="d"
+        Title="Keyboard Tester" Height="450" Width="800">
+    <Grid Name="gridKeyboard" Margin="20" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <!--Function Keys-->
+            <RowDefinition Height="10"/>
+            <!-- Spacer between function keys and alphanumeric keys -->
+            <RowDefinition Height="170"/>
+            <!-- Main keys -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/> <!-- Main Column-->
+            <ColumnDefinition Width="104"/> <!-- Middle column (home, end etc, arrows) -->
+            <ColumnDefinition Width="136"/> <!-- Numeric Keyboard -->
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="stackFunctionKeys" Grid.Row="0" Grid.Column="0" Orientation="Vertical" Height="32" Width="480" >
+            <Grid Name="gridFunctionKeys" Height="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/> <!--FILLER-->
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="16"/> <!-- F4-F5 filler-->
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="buttonEsc" Margin="1, 0"  Grid.Column="0">Esc</Button>
+                <Button Name="buttonF1" Margin="1, 0" Grid.Column="2">F1</Button>
+                <Button Name="buttonF2" Margin="1, 0" Grid.Column="3">F2</Button>
+                <Button Name="buttonF3" Margin="1, 0" Grid.Column="4">F3</Button>
+                <Button Name="buttonF4" Margin="1, 0" Grid.Column="5">F4</Button>
+                <Button Name="buttonF5" Margin="1, 0" Grid.Column="7">F5</Button>
+                <Button Name="buttonF6" Margin="1, 0" Grid.Column="8">F6</Button>
+                <Button Name="buttonF7" Margin="1, 0" Grid.Column="9">F7</Button>
+                <Button Name="buttonF8" Margin="1, 0" Grid.Column="10">F8</Button>
+                <Button Name="buttonF9" Margin="1, 0" Grid.Column="12">F9</Button>
+                <Button Name="buttonF10" Margin="1, 0" Grid.Column="13">F10</Button>
+                <Button Name="buttonF11" Margin="1, 0" Grid.Column="14">F11</Button>
+                <Button Name="buttonF12" Margin="1, 0" Grid.Column="15">F12</Button>
+                 
+            </Grid>
+        </StackPanel>
+        <!--Main Keys Area-->
+        <StackPanel Name="stackMainKeys" Grid.Row="2" Grid.Column="0"  Orientation="Vertical" Height="170" Width="480">
+            <!--#region Alphanumeric keys area -->
+            <Grid Name="stackAlphaNumeric" Height="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Margin="1, 0" Grid.Column="0">~</Button>
+                <Button Margin="1, 0" Grid.Column="1">1</Button>
+                <Button Margin="1, 0" Grid.Column="2">2</Button>
+                <Button Margin="1, 0" Grid.Column="3">3</Button>
+                <Button Margin="1, 0" Grid.Column="4">4</Button>
+                <Button Margin="1, 0" Grid.Column="5">5</Button>
+                <Button Margin="1, 0" Grid.Column="6">6</Button>
+                <Button Margin="1, 0" Grid.Column="7">7</Button>
+                <Button Margin="1, 0" Grid.Column="8">8</Button>
+                <Button Margin="1, 0" Grid.Column="9">9</Button>
+                <Button Margin="1, 0" Grid.Column="10">0</Button>
+                <Button Margin="1, 0" Grid.Column="11">-</Button>
+                <Button Margin="1, 0" Grid.Column="12">=</Button>
+                <Button Margin="1, 0" Grid.Column="13">Backspace</Button>
+            </Grid>
+            <!--#endregion-->
+            
+            <!--#region Q Keys Row-->
+            <Grid Name="stackQrow" Height="32" Margin="0, 2, 0 ,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="buttonTab" Margin="1, 0" Grid.Column="0">Tab</Button>
+                <Button Name="buttonQ" Margin="1, 0" Grid.Column="1">Q</Button>
+                <Button Name="buttonW" Margin="1, 0" Grid.Column="2">W</Button>
+                <Button Name="buttonE" Margin="1, 0" Grid.Column="3">E</Button>
+                <Button Name="buttonR" Margin="1, 0" Grid.Column="4">R</Button>
+                <Button Name="buttonT" Margin="1, 0" Grid.Column="5">T</Button>
+                <Button Name="buttonY" Margin="1, 0" Grid.Column="6">Y</Button>
+                <Button Name="buttonU" Margin="1, 0" Grid.Column="7">U</Button>
+                <Button Name="buttonI" Margin="1, 0" Grid.Column="8">I</Button>
+                <Button Name="buttonO" Margin="1, 0" Grid.Column="9">O</Button>
+                <Button Name="buttonP" Margin="1, 0" Grid.Column="10">P</Button>
+                <Button Name="buttonLeftBracket" Margin="1, 0" Grid.Column="11">[{</Button>
+                <Button Name="buttonRightBracket" Margin="1, 0" Grid.Column="12">]}</Button>
+                <Button Name="buttonBackSlash" Margin="1, 0" Grid.Column="13">\ |</Button>
+
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region A Keys Row-->
+            <Grid Name="stackArow" Height="32" Margin="0, 2, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="buttonCapsLock" Margin="1, 0" Grid.Column="0">Caps Lock</Button>
+                <Button Name="buttonA" Margin="1, 0" Grid.Column="1">A</Button>
+                <Button Name="buttonS" Margin="1, 0" Grid.Column="2">S</Button>
+                <Button Name="buttonD" Margin="1, 0" Grid.Column="3">D</Button>
+                <Button Name="buttonF" Margin="1, 0" Grid.Column="4">F</Button>
+                <Button Name="buttonG" Margin="1, 0" Grid.Column="5">G</Button>
+                <Button Name="buttonH" Margin="1, 0" Grid.Column="6">H</Button>
+                <Button Name="buttonJ" Margin="1, 0" Grid.Column="7">J</Button>
+                <Button Name="buttonK" Margin="1, 0" Grid.Column="8">K</Button>
+                <Button Name="buttonL" Margin="1, 0" Grid.Column="9">L</Button>
+                <Button Name="buttonSemiColon" Margin="1, 0" Grid.Column="10">; :</Button>
+                <Button Name="buttonQuote" Margin="1, 0" Grid.Column="11">' "</Button>
+                <Button Name="buttonEnter" Margin="1, 0" Grid.Column="12">Enter</Button>
+
+            </Grid>
+            <!--#endregion-->
+            
+            <!--#region Z (US) Keys Row-->
+            <Grid Name="stackZRow" Height="32" Margin="0, 2, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="buttonLeftShift" Margin="1, 0" Grid.Column="0">Shift</Button>
+                <Button Name="buttonZ" Margin="1, 0" Grid.Column="1">Z</Button>
+                <Button Name="buttonX" Margin="1, 0" Grid.Column="2">X</Button>
+                <Button Name="buttonC" Margin="1, 0" Grid.Column="3">C</Button>
+                <Button Name="buttonV" Margin="1, 0" Grid.Column="4">V</Button>
+                <Button Name="buttonB" Margin="1, 0" Grid.Column="5">B</Button>
+                <Button Name="buttonN" Margin="1, 0" Grid.Column="6">N</Button>
+                <Button Name="buttonM" Margin="1, 0" Grid.Column="7">M</Button>
+                <Button Name="buttonComma" Margin="1, 0" Grid.Column="8">,</Button>
+                <Button Name="buttonDot" Margin="1, 0" Grid.Column="9">.</Button>
+                <Button Name="buttonForwardSlash" Margin="1, 0" Grid.Column="10">/</Button>
+                <Button Name="buttonRightShift" Margin="1, 0" Grid.Column="11">Shift</Button>
+
+            </Grid>
+            <!--#endregion-->
+            
+            <!--#region Bottom Keys Row-->
+            <Grid Name="stackBottomRow" Height="32" Margin="0, 2, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="buttonLeftControl" Margin="1,0" Grid.Column="0">Ctrl</Button>
+                <Button Name="buttonLeftWinKey" Margin="1, 0" Grid.Column="1">Win</Button>
+                <Button Name="buttonLeftAlt" Margin="1, 0" Grid.Column="2">Alt</Button>
+                <Button Name="buttonSpace" Margin="1, 0" Grid.Column="3">Space</Button>
+                <Button Name="buttonRightAlt" Margin="1, 0" Grid.Column="4">Alt</Button>
+                <Button Name="buttonRightWinKey" Margin="1, 0" Grid.Column="5">Win</Button>
+                <Button Name="buttonContextMenu" Margin="1, 0" Grid.Column="6">Con</Button>
+                <Button Name="buttonRightCtrl" Margin="1, 0" Grid.Column="7">Ctrl</Button>
+                
+                
+            </Grid>
+            <!--#endregion-->
+
+        </StackPanel>
+        
+        <!--#region Middle Section-->
+
+        <StackPanel Name="stackTopMiddleRegion" Grid.Row="0" Grid.Column="1">
+            <Grid Name="stackPrintKeys" Height="32" Margin="0, 0, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="34"/>
+                    <ColumnDefinition Width="34"/>
+                    <ColumnDefinition Width="34"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="buttonPrintScreen" Margin="1, 0" Grid.Column="0">Prnt Sc</Button>
+                <Button Name="buttonScrollLock" Margin="1, 0" Grid.Column="1">Scrl Lk</Button>
+                <Button Name="buttonPause" Margin="1, 0" Grid.Column="2" >Pause</Button>
+
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Name="stackCenterMiddleRegion" Grid.Row="2" Grid.Column="1">
+            <Grid Name="stackPositionKeys" Margin="0, 0, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="34"/>
+                    <ColumnDefinition Width="34"/>
+                    <ColumnDefinition Width="34"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                </Grid.RowDefinitions>
+
+                <Button Name="buttonInsert" Margin="0, 0, 1, 2" Grid.Row="0" Grid.Column="0">Ins</Button>
+                <Button Name="buttonHome" Margin="0, 0, 1, 2" Grid.Row="0" Grid.Column="1">Home</Button>
+                <Button Name="buttonPgUp" Margin="0, 0, 1, 2" Grid.Row="0" Grid.Column="2">PgUp</Button>
+                <Button Name="buttonDel" Margin="0, 0, 1, 2" Grid.Row="1" Grid.Column="0">Del</Button>
+                <Button Name="buttonEnd" Margin="0, 0, 1, 2" Grid.Row="1" Grid.Column="1">End</Button>
+                <Button Name="buttonPdDn" Margin="0, 0, 1, 2" Grid.Row="1" Grid.Column="2">PdDn</Button>
+                <Button Name="buttonArrowUp" Margin="0, 0, 1, 2" Grid.Row="3" Grid.Column="1">UP</Button>
+                <Button Name="buttonArrowLeft" Margin="0, 0, 1, 2" Grid.Row="4" Grid.Column="0">Left</Button>
+                <Button Name="buttonArrowDown" Margin="0, 0, 1, 2" Grid.Row="4" Grid.Column="1">Down</Button>
+                <Button Name="buttonArrowRight" Margin="0, 0, 1, 2" Grid.Row="4" Grid.Column="2">Right</Button>
+                
+                
+            </Grid>
+
+            
+        </StackPanel>
+        
+        <!--#endregion-->
+        
+        <!--#region Numeric Keyboard-->
+        <Grid Name="stackNumeric" Margin="10, 0, 0, 0" Grid.Row="2" Grid.Column="2">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="4" Grid.ColumnSpan="2">
+                <Button Name="buttonNumIns" Margin="0, 0, 1, 1" >0 Ins</Button>
+            </Border>
+
+            <Border Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
+                <Button Name="buttonNumPlus" Margin="0, 0, 1, 1">+</Button>
+            </Border>
+            <Border Grid.Column="3" Grid.Row="3" Grid.RowSpan="2">
+                <Button Name="buttonNumEnter" Margin="0, 0, 1, 1" >enter</Button>
+            </Border>
+
+            <!-- ROW 0 -->
+            <Button Name="buttonNum" Margin="0, 0, 1, 1" Grid.Column="0" Grid.Row="0">Num</Button>
+            <Button Name="buttonNumForwardSlash" Margin="0, 0, 1, 1" Grid.Column="1" Grid.Row="0">/</Button>
+            <Button Name="buttonNumAsterisk" Margin="0, 0, 1, 1" Grid.Column="2" Grid.Row="0">*</Button>
+            <Button Name="buttonNumDash" Margin="0, 0, 1, 1" Grid.Column="3" Grid.Row="0">-</Button>
+
+            <!-- ROW 1 -->
+            <Button Name="buttonNum7" Margin="0, 0, 1, 1" Grid.Column="0" Grid.Row="1">7</Button>
+            <Button Name="buttonNum8" Margin="0, 0, 1, 1" Grid.Column="1" Grid.Row="1">8</Button>
+            <Button Name="buttonNum9" Margin="0, 0, 1, 1" Grid.Column="2" Grid.Row="1">9</Button>
+
+            <!-- ROW 2 -->
+            <Button Name="buttonNum4" Margin="0, 0, 1, 1" Grid.Column="0" Grid.Row="2">4</Button>
+            <Button Name="buttonNum5" Margin="0, 0, 1, 1" Grid.Column="1" Grid.Row="2">5</Button>
+            <Button Name="buttonNum6" Margin="0, 0, 1, 1" Grid.Column="2" Grid.Row="2">6</Button>
+
+            <!-- ROW 3 -->
+            <Button Name="buttonNum1" Margin="0, 0, 1, 1" Grid.Column="0" Grid.Row="3">1</Button>
+            <Button Name="buttonNum2" Margin="0, 0, 1, 1" Grid.Column="1" Grid.Row="3">2</Button>
+            <Button Name="buttonNum3" Margin="0, 0, 1, 1" Grid.Column="2" Grid.Row="3">3</Button>
+
+            <!-- ROW 4 -->
+            <Button Name="buttonNumDel" Margin="0, 0, 1, 1" Grid.Column="2" Grid.Row="4">. del</Button>
+            
+
+
+
+
+
+
+        </Grid>
+        
+        <!--#endregion-->
+
+    </Grid>
+</Window>
